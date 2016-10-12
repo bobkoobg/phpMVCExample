@@ -1,26 +1,20 @@
 <?php
     class IndexController {
-
-
         private $indexModel;
+        private $config;
 
         public $layout;
-        public $rainbow = "rainbow";
 
-        public function __construct(){
-            $_SERVER['DOCUMENT_ROOT'] = "/var/www/fb-msg-counter";
-            include( $_SERVER['DOCUMENT_ROOT'] . "/model/IndexModel.php" );
-            
-            $this->indexModel = new IndexModel();
+        public function __construct( $config, $model ){
+            $this->config = $config->config;
+            $this->indexModel = $model;
+
             $this->layout['news'] = $this->indexModel->getNews();
+            $this->layout['navigation'] = $this->config['navigation'];
         }
 
         public function home() {
-          $first_name = 'Jon';
-          $last_name  = 'Snow';
-          $rainbow = $this->rainbow;
           $layout = $this->layout;
-
           require_once('view/pages/home.php');
         }
 
