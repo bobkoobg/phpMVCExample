@@ -4,4 +4,7 @@ RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l
-RewriteRule ^(.*)$ index.php?url=$1 [QSA,R]
+RewriteCond %{REQUEST_URI} !\.(?:css|js|jpe?g|gif|png)$ [NC]
+RewriteRule ^(.*)$ ?$1 [QSA,R]
+# not rewrite css, js and images
+

@@ -1,5 +1,4 @@
 <?php
-
 	### Load all controllers
 	foreach (glob("controller/*.php") as $filename) {
 	    include $filename;
@@ -31,5 +30,3 @@
     	### call the action
     	$c->{ "home" }();
 	}
-
-

@@ -1,4 +1,4 @@
-<nav>
+<nav class="xs-90 s-90 m-90 l-90 xl-90">
 <?php 
 	$content = [
 		'Index' => ['name' => 'Home', 'href' => '/index.php'],

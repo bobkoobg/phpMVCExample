@@ -8,7 +8,9 @@
         public $rainbow = "rainbow";
 
         public function __construct(){
-            include( $_SERVER['DOCUMENT_ROOT'] . '/model/IndexModel.php' );
+            $_SERVER['DOCUMENT_ROOT'] = "/var/www/fb-msg-counter";
+            include( $_SERVER['DOCUMENT_ROOT'] . "/model/IndexModel.php" );
+            
             $this->indexModel = new IndexModel();
             $this->layout['news'] = $this->indexModel->getNews();
         }
