@@ -35,7 +35,16 @@
 	$data = [
 		'index' => [
 			'controller' => 'IndexController',
-			'model' => 'IndexModel']
+			'model' => 'IndexModel'],
+		'portfolio' => [
+			'controller' => 'PortfolioController',
+			'model' => 'PortfolioModel'],
+		'product' => [
+			'controller' => 'ProductController',
+			'model' => 'ProductModel'],
+		'contact' => [
+			'controller' => 'ContactController',
+			'model' => 'ContactModel'],
 	];
 
 	### Find the specific Controller file names based on the page identifier

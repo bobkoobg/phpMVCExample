@@ -45,7 +45,18 @@
  				'title' => 'News G',
  				'message' => 'News G Message Message Message Message Message',
  				'author' => 'Author',
- 				'date' => '19th Jan 2016'], 
+ 				'date' => '19th Jan 2016'],
+ 			8 => [
+ 				'title' => 'News H',
+ 				'message' => 'News H Message Message Message Message Message',
+ 				'author' => 'Author',
+ 				'date' => '18th Jan 2016'], 
+			9 => [
+ 				'title' => 'News I',
+ 				'message' => 'News I Message Message Message Message Message',
+ 				'author' => 'Author',
+ 				'date' => '17th Jan 2016'], 
+
  		];
  	}
 
@@ -74,7 +85,25 @@
  				'owner' => 'Owner D',
  				'logo' => '/view/img/favicon.ico',
  				'message' => 'Company D Message', 
- 				'logo-color' => '#ffa500']
+ 				'logo-color' => '#ffa500'],
+			5 => [
+ 				'name' => 'Company E',
+ 				'owner' => 'Owner E',
+ 				'logo' => '/view/img/favicon.ico',
+ 				'message' => 'Company E Message',
+ 				'logo-color' => '#ff0000'],
+			6 => [
+ 				'name' => 'Company F',
+ 				'owner' => 'Owner F',
+ 				'logo' => '/view/img/favicon.ico',
+ 				'message' => 'Company F Message',
+ 				'logo-color' => '#008000'],
+			7 => [
+ 				'name' => 'Company G',
+ 				'owner' => 'Owner G',
+ 				'logo' => '/view/img/favicon.ico',
+ 				'message' => 'Company G Message', 
+ 				'logo-color' => '#0000ff'],
  		];
  	}
  }
