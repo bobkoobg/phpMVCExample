@@ -1,1 +1,4 @@
 *.sublime*
+library/*
+view/library/*
+view/styling/css/*
