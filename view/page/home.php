@@ -8,32 +8,34 @@
 		} 
 	?></ul>
 </nav>
-<div class="wrapper index-wrapper">
-	<div class="wrapper intro">
-		<p>Welcome to "Da-da-da" Company!</p>
-	</div>
+<div id="index-page">
+	<div class="wrapper index-wrapper">
+		<div class="wrapper intro">
+			<p><?= $layout['introduction']['message'] ?></p>
+		</div>
 
-	<div class="wrapper companies-wrapper">
-		<div id="companies-carousel" class="owl-carousel"><?php
-		 	foreach ($layout['companies'] as $key => $value) {
-				?><div class="wrapper company-wrap phone-1-90 phone-2-90 phone-3-90 tablet-1-90 tablet-2-90 desktop-0-90 desktop-1-90 desktop-2-90 desktop-3-90 desktop-4-90" data-company-id="<?=$key?>">
-					<div><?=$value['name']?></div>
-					<div><?=$value['owner']?></div>
-					<div><img class="company-image" src="<?=$value['image']?>"></div>
-					<div><?=$value['message']?></div>
+		<div class="wrapper companies-wrapper">
+			<div id="companies-carousel" class="owl-carousel"><?php
+			 	foreach ($layout['companies'] as $key => $value) {
+					?><div class="wrapper company-wrapper phone-1-90 phone-2-90 phone-3-90 tablet-1-90 tablet-2-90 desktop-0-90 desktop-1-90 desktop-2-90 desktop-3-90 desktop-4-90" data-company-id="<?=$key?>" style="background-color: <?=$value['logo-color']?> !important;">
+						<div><?=$value['name']?></div>
+						<div><?=$value['owner']?></div>
+						<div><img class="company-image" src="<?=$value['logo']?>"></div>
+						<div><?=$value['message']?></div>
+					</div><?php
+				}
+			?></div>
+		</div>
+
+		<div class="wrapper news-wrapper"><?php 
+			foreach ($layout['news'] as $key => $value) {
+				?><div class="wrapper news-elem-wrapper phone-1-95 phone-2-95 phone-3-95 tablet-1-95 tablet-2-95 desktop-0-95 desktop-1-95 desktop-2-95 desktop-3-95 desktop-4-95">
+					<div class="title"><?=$value['title']?></div>
+					<div class="message"><?=$value['message']?></div>
+					<div class="author"><?=$value['author']?></div>
+					<div class="date"><?=$value['date']?></div>
 				</div><?php
-			}
+			} 
 		?></div>
 	</div>
-
-	<div class="wrapper news-wrapper"><?php 
-		foreach ($layout['news'] as $key => $value) {
-			?><div class="wrapper news-elem-wrapper">
-				<div><?=$value['title']?></div>
-				<div><?=$value['message']?></div>
-				<div><?=$value['author']?></div>
-				<div><?=$value['date']?></div>
-			</div><?php
-		} 
-	?></div>
 </div>

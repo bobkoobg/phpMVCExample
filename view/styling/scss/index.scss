@@ -1,23 +1,79 @@
-.masterlord {
-	background-color: blue;
-}
-
-.company-image {
-	max-height: 50px;
-	max-width: 50px;
-}
-
-.company-wrap {
-    text-align: center;
-    background-color: #f3f3f3;
-}
-
-.intro {
-	background-color: #f3f3f3;
-
-
-}
-
-.intro p {
-		font-weight: 700;
+#index-page {
+	.index-wrapper {
+		.intro {
+			display: inline-table;
+			background-color: #f3f3f3;
+			height: 35px;
+			
+			p {
+				font-weight: 700;
+				margin: 0;
+	    		padding: 10px 10px;
+			}
+		}
 	}
+
+	.company-wrapper {
+
+		text-align: center;
+	    padding-top: 100px;
+    	min-height: 200px;
+    	cursor: pointer;
+		
+		.company-image {
+			max-height: 50px;
+			max-width: 50px;
+		}
+	}
+
+	.news-wrapper {
+		background-color: #f3f3f3;
+		padding: 20px 0;
+	    display: inline-block;
+
+		.news-elem-wrapper {
+        	display: table;
+		}
+
+		> :nth-child(even) {
+		    background-color: #4caf50;
+		}
+
+		> :nth-child(even):hover {
+		    background-color: #008000;
+		}
+
+		> :nth-child(odd) {
+		    background-color: #ffc04c;
+		}
+
+		> :nth-child(odd):hover {
+		    background-color: #ffa500;
+		}
+
+		.title {
+		    text-align: center;
+		    font-size: 16px;
+		    font-weight: 700;
+		    margin: 5px 0;
+		}
+
+		.message {
+		    margin: 0 0 10px 20px;
+    		font-style: italic;
+		}
+
+		.author,
+		.date {
+	    	padding: 0 0 10px 10px;
+		}
+
+		.author {
+			float: left;
+		}
+
+		.date {
+			float: right;
+		}
+	}
+}
