@@ -11,14 +11,15 @@
 
             $this->layout['news'] = $this->indexModel->getNews();
             $this->layout['navigation'] = $this->config['navigation'];
+            $this->layout['companies'] = $this->indexModel->getCompanies();
         }
 
         public function home() {
           $layout = $this->layout;
-          require_once('view/pages/home.php');
+          require_once('view/page/home.php');
         }
 
         public function error() {
-          require_once('view/pages/error.php');
+          require_once('view/page/error.php');
         }
     }
