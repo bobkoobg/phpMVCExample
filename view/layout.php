@@ -1,8 +1,9 @@
 <!-- <DOCTYPE html> -->
 <html>
   <head>
-    <title>PHP MASTAA</title>
-    <link rel="stylesheet" href="view/library/flexee.min.css" media="screen" type="text/css" />
+    <title>Example MVC</title>
+     <link rel="stylesheet" href="view/library/flexee-env.css" media="screen" type="text/css" />
+     <link rel="shortcut icon" type="image/png" href="view/library/favicon.png"/>
   </head>
   <body>
     <?php require_once('routes.php'); ?>

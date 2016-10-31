@@ -8,10 +8,19 @@
 	}
 	include ("config.php");
 
+	###compile scss
+	require "view/library/scss.inc.php";
+	$scss = new scssc();
+
+	$scssIn = file_get_contents(__DIR__ . '/view/library/flexee.scss');
+	$cssOut = $scss->compile($scssIn);
+	### Fix file_put_contents permission denied : /var/www/fb-msg-counter/view$ chmod 777 library
+	file_put_contents(__DIR__ . '/view/library/flexee-env.css', $cssOut);
+
 	### Find the page identifier based on url
-	error_log("*D:DEBUG* $get url is : " . $_GET['url'] );
+	//error_log("*D:DEBUG* get url is : " . $_GET['url'] );
 	$page = ( !isset($_GET['url']) ? 'index' : $_GET['url']);
-	error_log("*B:DEBUG*: page is : ". $page);
+	//error_log("*B:DEBUG*: page is : ". $page);
 
 	### Define controller file names
 	$data = [
