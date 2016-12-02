@@ -9,10 +9,8 @@
             $this->config = $config->config;
             $this->indexModel = $model;
 
-            $this->layout['news'] = $this->indexModel->getNews();
+            $this->layout['test'] = $this->indexModel->getTest();
             $this->layout['navigation'] = $this->config['navigation'];
-            $this->layout['companies'] = $this->indexModel->getCompanies();
-            $this->layout['introduction'] = $this->indexModel->getIntroduction();
         }
 
         public function home() {

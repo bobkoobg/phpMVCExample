@@ -8,16 +8,10 @@
     <!-- Jquery and basic js -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="view/js/index.js"></script>
-
-    <!-- Owl Carousel -->
-    <link rel="stylesheet" href="view/library/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="view/library/owl-carousel/owl.theme.css">
-    <script src="view/library/owl-carousel/owl.carousel.js"></script>
   </head>
   <body>
     <?php require_once('routes.php'); ?>
   <footer>
-    <div class="footer-text-wrap">Bobkoo's apps 2016</div>
   </footer>
   <body>
 <html>
