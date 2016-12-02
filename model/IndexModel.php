@@ -3,14 +3,16 @@
 
  	public function __construct(){}
 
- 	public function getTest() {
- 		return [
- 			1 => [
- 				'key1' => 'value1',
- 				'key2' => 'value2'], 
- 			2 => [
- 				'key1' => 'value1',
- 				'key2' => 'value2']
- 		];
+ 	public function getSubCompanies() {
+ 		return [[
+ 				'name' => 'Crown',
+ 				'image' => '/view/img/crown-teaser.png'], 
+ 				[
+ 				'name' => 'Norton',
+ 				'image' => '/view/img/norton-teaser.png'],
+ 				[
+ 				'name' => 'Felisatti',
+ 				'image' => '/view/img/felisatti-teaser.png']];
  	}
  }
+ 

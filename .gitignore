@@ -2,3 +2,6 @@
 library/*
 view/library/*
 view/styling/css/*
+view/styling/flags/*
+view/styling/fonts/*
+

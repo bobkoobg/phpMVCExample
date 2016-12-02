@@ -13,18 +13,16 @@
 
 	$scss = new scssc();
 
-	$scssIn = file_get_contents(__DIR__ . '/view/styling/scss/flexee.scss');
+	$scssIn = file_get_contents(__DIR__ . '/view/styling/scss/flexee/flexee.scss');
 	$cssOut = $scss->compile($scssIn);
-	### Fix file_put_contents permission denied : /var/www/fb-msg-counter/view$ chmod 777 libraryc
+	### Fix file_put_contents permission denied : /var/www/fb-msg-counter/view$ chmod 777 library
 	file_put_contents(__DIR__ . '/view/styling/css/flexee-env.css', $cssOut);
 
 	$scss = new scssc();
 	$scssIn = file_get_contents(__DIR__ . '/view/styling/scss/main.scss');
-
 	### Set import path so that scss.inc can understand where to search scss files
 	$scss->setImportPaths(__DIR__ . "/view/styling/scss/"); 
 	$cssOut = $scss->compile($scssIn);
-
 	### Fix file_put_contents permission denied : /var/www/fb-msg-counter/view$ chmod 777 library
 	file_put_contents(__DIR__ . '/view/styling/css/main.css', $cssOut);
 
@@ -36,13 +34,13 @@
 		'index' => [
 			'controller' => 'IndexController',
 			'model' => 'IndexModel'],
-		'portfolio' => [
-			'controller' => 'PortfolioController',
-			'model' => 'PortfolioModel'],
-		'product' => [
+		'about' => [
+			'controller' => 'AboutController',
+			'model' => 'AboutModel'],
+		'products' => [
 			'controller' => 'ProductController',
 			'model' => 'ProductModel'],
-		'contact' => [
+		'contacts' => [
 			'controller' => 'ContactController',
 			'model' => 'ContactModel'],
 	];
