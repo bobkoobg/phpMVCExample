@@ -19,12 +19,9 @@
             $this->layout['page'] = ( !isset($_GET['url']) ? 'index.php' : $_GET['url']);
         }
 
-        public function home() {
+        public function show() {
           $layout = $this->layout;
-          require_once('view/page/index.php');
-        }
-
-        public function error() {
-          require_once('view/page/error.php');
+          require_once("view/page/bodyheader.php");
+          require_once("view/page/index.php");
         }
     }

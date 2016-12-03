@@ -1,13 +1,10 @@
 <?php
-    class ContactController {
-        private $indexModel;
+    class ErrorController {
         private $config;
-
         public $layout;
 
-        public function __construct( $config, $model ){
+        public function __construct( $config ){
             $this->config = $config->config;
-            $this->indexModel = $model;
 
             $this->layout['navigation'] = $this->config['navigation'];
             $this->layout['languages'] = $this->config['languages'];
@@ -20,6 +17,6 @@
         public function show() {
           $layout = $this->layout;
           require_once("view/page/bodyheader.php");
-          require_once('view/page/contact.php');
+          require_once('view/page/error.php');
         }
     }

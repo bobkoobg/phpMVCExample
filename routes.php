@@ -21,6 +21,7 @@
 
 	### Find the page identifier based on url
 	$page = ( !isset($_GET['url']) ? 'index' : $_GET['url']);
+	$isExisting = false;
 
 	### Define controller file names
 	$data = [
@@ -45,6 +46,7 @@
 	    if ($page == $key) {
 	    	$modelComponent = $components['model'];
 	        $controllerComponent = $components['controller'];
+	        $isExisting = true;
 	        break;
 	    }
 	}
@@ -52,16 +54,19 @@
 	### Create new instances of the chosen Model, View and Controller
 	$controller;
 	$model;
+	$config = new Config();
+
+	### Load headers first
+	$headersController = new HeadersController( $config, $isExisting );
+	$headersController->show();
+
 	if ( isset( $controllerComponent ) && isset( $modelComponent ) ) {
-	    $config = new Config();
-
-		### Load headers first
-		$headersController = new HeadersController( $config );
-		$headersController->headers();
-
 	    $model = new $modelComponent();
 	    $controller = new $controllerComponent( $config, $model );
 
     	### call the action
-    	$controller->{ "home" }();
+    	$controller->{ "show" }();
+	} else {
+		$controller = new ErrorController( $config );
+		$controller->show( $config );
 	}
