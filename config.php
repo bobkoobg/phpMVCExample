@@ -83,6 +83,10 @@
 					'src' => 'http://code.jquery.com/jquery-3.1.1.min.js'
 					]
 				]
+			],
+			'error404' => [
+				'bg' => 'Грешка Номер 404 : Съдържанието не е намерено',
+				'en' => 'Error Code 404 : Content not found'
 			]
 		];
 

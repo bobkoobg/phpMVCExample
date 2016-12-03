@@ -8,8 +8,9 @@
 
 			# if the url is not set or the page is not existing
 			$page = ( !isset($_GET['url']) || !$isExisting ? 'index' : $_GET['url']);
+			$actualPage = explode("/", $page)[0];
 			
-			$this->layout['context'] = $page;
+			$this->layout['context'] = $actualPage;
 			$this->layout['headers'] = $this->config['headers'];
 		}
 

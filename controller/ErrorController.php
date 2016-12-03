@@ -12,6 +12,8 @@
             $userChoice = isset($_GET["lang"]) ? $_GET["lang"] : "bg";
             $this->layout['lang'] = array_key_exists($userChoice, $this->layout['languages']) ? $userChoice : "bg";
             $this->layout['page'] = ( !isset($_GET['url']) ? 'index' : $_GET['url']);
+
+            $this->layout['error'] = $this->config['error404'][$userChoice];
         }
 
         public function show() {

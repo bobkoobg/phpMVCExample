@@ -1,13 +1,13 @@
 <?php
     class ProductController {
-        private $indexModel;
+        private $productModel;
         private $config;
 
         public $layout;
 
         public function __construct( $config, $model ){
             $this->config = $config->config;
-            $this->indexModel = $model;
+            $this->productModel = $model;
 
             $this->layout['navigation'] = $this->config['navigation'];
             $this->layout['languages'] = $this->config['languages'];
@@ -18,8 +18,18 @@
         }
 
         public function show() {
-          $layout = $this->layout;
-          require_once("view/page/bodyheader.php");
-          require_once('view/page/product.php');
+            $this->layout['products'] = $this->productModel->exampleProducts();
+
+            $layout = $this->layout;
+            require_once("view/page/bodyheader.php");
+            require_once('view/page/product.php');
+        }
+
+        public function product( $id ) {
+            $this->layout['product'] = $this->productModel->getProductById( $id );
+
+            $layout = $this->layout;
+            require_once("view/page/bodyheader.php");
+            require_once("view/page/specificProduct.php");
         }
     }

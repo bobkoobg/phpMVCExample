@@ -20,7 +20,9 @@
 	file_put_contents(__DIR__ . '/view/styling/css/main.css', $cssOut);
 
 	### Find the page identifier based on url
+	
 	$page = ( !isset($_GET['url']) ? 'index' : $_GET['url']);
+	$exploadedRequest = explode("/", $page);
 	$isExisting = false;
 
 	### Define controller file names
@@ -43,7 +45,7 @@
 	$controllerComponent;
 	$modelComponent;		
 	foreach($data as $key => $components){
-	    if ($page == $key) {
+	    if ($exploadedRequest[0] == $key) {
 	    	$modelComponent = $components['model'];
 	        $controllerComponent = $components['controller'];
 	        $isExisting = true;
@@ -64,8 +66,16 @@
 	    $model = new $modelComponent();
 	    $controller = new $controllerComponent( $config, $model );
 
-    	### call the action
-    	$controller->{ "show" }();
+	    if( count($exploadedRequest) == 1 ) {
+	    	### call the action
+	    	$controller->{ "show" }();
+	    } else if( count($exploadedRequest) == 3 && method_exists( $controller, $exploadedRequest[1] ) ) {
+	    	$controller->{ $exploadedRequest[1] }( $exploadedRequest[2] );
+	    } else {
+	    	$controller = new ErrorController( $config );
+			$controller->show( $config );
+	    }
+
 	} else {
 		$controller = new ErrorController( $config );
 		$controller->show( $config );
