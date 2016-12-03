@@ -12,18 +12,11 @@
 	require "library/scss.inc.php";
 
 	$scss = new scssc();
-
-	$scssIn = file_get_contents(__DIR__ . '/view/styling/scss/flexee/flexee.scss');
-	$cssOut = $scss->compile($scssIn);
-	### Fix file_put_contents permission denied : /var/www/fb-msg-counter/view$ chmod 777 library
-	file_put_contents(__DIR__ . '/view/styling/css/flexee-env.css', $cssOut);
-
-	$scss = new scssc();
 	$scssIn = file_get_contents(__DIR__ . '/view/styling/scss/main.scss');
 	### Set import path so that scss.inc can understand where to search scss files
 	$scss->setImportPaths(__DIR__ . "/view/styling/scss/"); 
 	$cssOut = $scss->compile($scssIn);
-	### Fix file_put_contents permission denied : /var/www/fb-msg-counter/view$ chmod 777 library
+	### Fix file_put_contents permission denied : /var/www/fb-msg-counter/view$ chmod 777 css
 	file_put_contents(__DIR__ . '/view/styling/css/main.css', $cssOut);
 
 	### Find the page identifier based on url
