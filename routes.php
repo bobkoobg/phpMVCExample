@@ -60,8 +60,13 @@
 	$controller;
 	$model;
 	if ( isset( $controllerComponent ) && isset( $modelComponent ) ) {
-	    $model = new $modelComponent();
 	    $config = new Config();
+
+		### Load headers first
+		$headersController = new HeadersController( $config );
+		$headersController->headers();
+
+	    $model = new $modelComponent();
 	    $controller = new $controllerComponent( $config, $model );
 
     	### call the action
