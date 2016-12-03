@@ -5,29 +5,34 @@
 			'real-document-root' => "/var/www/fb-msg-counter",
 			'languages' => [
 				'bg' => ['name' => 'BG', 'href' => '?lang=bg', 'html_classes' => 'flag-icon flag-icon-bg'],
-				'en' => ['name' => 'EN', 'href' => '?lang=en', 'html_classes' => 'flag-icon flag-icon-gb']
+				'en' => ['name' => 'EN', 'href' => '?lang=en', 'html_classes' => 'flag-icon flag-icon-gb'],
+				'ru' => ['name' => 'RU', 'href' => '?lang=ru', 'html_classes' => 'flag-icon flag-icon-ru']
 			],
 			'navigation' => [
 				'Index' => ['name' => [
 								'bg' => 'Начало', 
-								'en' => 'Home'
+								'en' => 'Home',
+								'ru' => 'Главная'
 							], 'href' => '/'],
 				'About' => ['name' => [
 								'bg' => 'За нас', 
-								'en' => 'About'
+								'en' => 'About',
+								'ru' => 'О нас'
 							], 'href' => '/about'],
 				'Products' => ['name' => [
 								'bg' => 'Продукти', 
-								'en' => 'Products'
+								'en' => 'Products',
+								'ru' => 'Продукты'
 							], 'href' => '/products'],
 				'Contacts' => ['name' => [
 								'bg' => 'Контакти', 
-								'en' => 'Contacts'
+								'en' => 'Contacts',
+								'ru' => 'Контакты'
 							], 'href' => '/contacts']	
 			],
 			'headers' => [
 				'title' => 'Sigma tlsys',
-				'version' => 'v0.2',
+				'version' => 'v0.2.1',
 				'links' => [
 					[
 					# Web icon
@@ -86,7 +91,8 @@
 			],
 			'error404' => [
 				'bg' => 'Грешка Номер 404 : Съдържанието не е намерено',
-				'en' => 'Error Code 404 : Content not found'
+				'en' => 'Error Code 404 : Content not found',
+				'ru' => 'Код ошибки 404: Материалы не найдены'
 			]
 		];
 

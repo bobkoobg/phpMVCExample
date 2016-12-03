@@ -12,10 +12,10 @@ header {
 	    right: 15px;
 	    top: 100px;
 	    width: 20px;
-	    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
-    	transition: width 1s;
+	    /*-webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+    	/*transition: width 1s;
     	-webkit-transition-delay: 1s; /* Safari */
-    	transition-delay: 1s;
+    	/*transition-delay: 1s;*/
 
     	#search-user-input {
     		background-color: #93181B;
@@ -28,29 +28,31 @@ header {
 
 
     	&:hover {
-			-webkit-transition-delay: 0s; /* Safari */
-			transition-delay: 0s;
-    		width: 220px;
+			/*-webkit-transition-delay: 0s; /* Safari */
+			/*transition-delay: 0s;
+    		width: 220px;*/
     	}
     }
 
     #languages-bar{
 		overflow: hidden;
 	    position: relative;
-	    width: 100px;
+	    width: 135px;
 	    height: 70px;
 	    float: right;
 
 	    #languages-bar-inner {
 	    	position: absolute;
 		    height: 20px;
-		    width: 110px;
-		    right: -50px;
+		    width: 40px;
+		    right: -20px;
 		    top: 30px;
 		    float: right;
 		    background-color: #93181b;
 		    padding: 10px 20px 10px 20px;
 		    border-radius: 20px;
+		    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+    		transition: width 1s;
 
 	    	.flag-icon {
 	    		cursor: pointer;
@@ -59,6 +61,16 @@ header {
 	    	    text-decoration: none;
 	    	    margin: 0 5px;
 		    }
+
+		    &:hover {
+				-webkit-transition-delay: 0s; /* Safari */
+				transition-delay: 0s;
+	    		width: 115px;
+
+	    		.language-icon-holder {
+	    			display: inline-block;
+	    		}
+	    	}
 	    }
 	}
 
