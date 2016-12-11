@@ -1,5 +1,6 @@
+
 function init() {
  	console.log("Index.js loaded...");
 }
 
-init();
+$( document ).ready( init() );

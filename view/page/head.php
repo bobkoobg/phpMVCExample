@@ -6,6 +6,6 @@
 	} ?>
 
 	<?php foreach ($layout['headers']['scripts'] as $key => $value) {
-		?><script type="<?=$value['type']?>" src="<?=$key == 0 ? $value['src'] . $layout['context'] . '.js' : $value['src']?>"></script><?php
+		?><script type="<?=$value['type']?>" src="<?=$key == 1 ? $value['src'] . $layout['context'] . '.js' : $value['src']?>"></script><?php
 	} ?>
 </head>

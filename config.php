@@ -4,9 +4,13 @@
 		public $config = [
 			'real-document-root' => "/var/www/fb-msg-counter",
 			'languages' => [
-				'bg' => ['name' => 'BG', 'href' => '?lang=bg', 'html_classes' => 'flag-icon flag-icon-bg'],
-				'en' => ['name' => 'EN', 'href' => '?lang=en', 'html_classes' => 'flag-icon flag-icon-gb'],
-				'ru' => ['name' => 'RU', 'href' => '?lang=ru', 'html_classes' => 'flag-icon flag-icon-ru']
+				'bg' => ['name' => 'BG', 'href' => '?lang=bg', 'html_classes' => 'flag-icon flag-icon-squared flag-icon-bg'],
+				'en' => ['name' => 'EN', 'href' => '?lang=en', 'html_classes' => 'flag-icon flag-icon-squared flag-icon-gb'],
+				'ru' => ['name' => 'RU', 'href' => '?lang=ru', 'html_classes' => 'flag-icon flag-icon-squared flag-icon-ru'],
+				'nl' => ['name' => 'NL', 'href' => '?lang=nl', 'html_classes' => 'flag-icon flag-icon-squared flag-icon-nl'],
+				'es' => ['name' => 'ES', 'href' => '?lang=es', 'html_classes' => 'flag-icon flag-icon-squared flag-icon-es'],
+				'fr' => ['name' => 'FR', 'href' => '?lang=fr', 'html_classes' => 'flag-icon flag-icon-squared flag-icon-fr'],
+				'tr' => ['name' => 'TR', 'href' => '?lang=tr', 'html_classes' => 'flag-icon flag-icon-squared flag-icon-tr']
 			],
 			'navigation' => [
 				'Index' => ['name' => [
@@ -32,7 +36,7 @@
 			],
 			'headers' => [
 				'title' => 'Sigma tlsys',
-				'version' => 'v0.2.1',
+				'version' => 'v0.2.2',
 				'links' => [
 					[
 					# Web icon
@@ -73,6 +77,11 @@
 				],
 				'scripts' => [
 					[
+					# Jquery
+					'type' => 'text/javascript',
+					'src' => 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'
+					],
+					[
 					# Template for specific page
 					'type' => 'text/javascript',
 					'src' => 'view/js/'
@@ -81,11 +90,6 @@
 					# General and core js file
 					'type' => 'text/javascript',
 					'src' => 'view/js/core.js'
-					],
-					[
-					# Jquery
-					'type' => 'text/javascript',
-					'src' => 'http://code.jquery.com/jquery-3.1.1.min.js'
 					]
 				]
 			],

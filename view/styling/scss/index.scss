@@ -1,85 +1,88 @@
 header {
-	background-image: url("../../img/header_logo.png");
-    height: 175px;
-    background-size: 100% 200px;
-    background-repeat: no-repeat;
+	height: 175px;
+
+    #header-logo {
+		
+		img {
+		    width: 600px;
+		    height: auto;
+		    position: absolute;
+		    top: 15px;
+		    left: 15px;
+		}
+	}
 
     #search-bar {
-    	cursor: pointer;
-    	font-size: 1.4em;
-	    float: right;
 	    position: absolute;
-	    right: 15px;
+	    right: 10px;
 	    top: 100px;
-	    width: 20px;
-	    /*-webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
-    	/*transition: width 1s;
-    	-webkit-transition-delay: 1s; /* Safari */
-    	/*transition-delay: 1s;*/
+	    cursor: pointer;
+	    font-size: 1.4em;
 
     	#search-user-input {
-    		background-color: #93181B;
+    		background-color: #c5c5c5;
     		color: #FFFFFF;
-		    border: 1px solid #AE0004;
+		    border: 1px solid #c5c5c5;
 		    border-radius: 5px;
-		    padding: 5px 10px;
+	        padding: 5px 10px 5px 30px;
 		    outline: none;
     	}
 
-
-    	&:hover {
-			/*-webkit-transition-delay: 0s; /* Safari */
-			/*transition-delay: 0s;
-    		width: 220px;*/
+    	.fa-search {
+    		position: relative;
+		    left: 30px;
+		    top: 2px;
     	}
+
     }
 
     #languages-bar{
 		overflow: hidden;
-	    position: relative;
-	    width: 135px;
-	    height: 70px;
-	    float: right;
+	    position: absolute;
+	    right: 0;
+	    width: 245px;
+	    height: 25px;
+	    padding: 8px 5px 5px 8px;
+	    margin: 25px 10px 0 0;
+	    background-color: #c5c5c5;
+    	border: 1px solid #c5c5c5;
+    	border-radius: 20px;
 
-	    #languages-bar-inner {
-	    	position: absolute;
-		    height: 20px;
-		    width: 40px;
-		    right: -20px;
-		    top: 30px;
-		    float: right;
-		    background-color: #93181b;
-		    padding: 10px 20px 10px 20px;
-		    border-radius: 20px;
-		    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
-    		transition: width 1s;
+	    .language-icon-holder {
+
+	    	&.chosen-language {
+	    		float: right;
+	    	}
+
+	    	&.possible-language {
+	    		display: inline-block;
+	    	}
 
 	    	.flag-icon {
 	    		cursor: pointer;
-		    	height: 17px;
-		    	width: 25px;
+	    	    height: 20px;
+				width: 20px;
 	    	    text-decoration: none;
 	    	    margin: 0 5px;
+
+	    	    &.img-circle {
+				    border-radius: 50%;
+				}
 		    }
+	    }
 
-		    &:hover {
-				-webkit-transition-delay: 0s; /* Safari */
-				transition-delay: 0s;
-	    		width: 115px;
-
-	    		.language-icon-holder {
-	    			display: inline-block;
-	    		}
-	    	}
+	    .chosen-language-literal {
+	    	float: right;
+		    font-weight: 700;
+		    font-size: 1.2em;
 	    }
 	}
-
 }
 
 #index-page {
 	.index-wrapper {
 		width: 101% !important;
-		.sub-companies-wrapper {
+		#sub-companies-wrapper {
 			.sub-company-wrapper {
 				height: 500px;
 			    background-repeat: no-repeat;

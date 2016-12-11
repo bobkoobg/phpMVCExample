@@ -1,16 +1,20 @@
 <header class="grid">
-	<div id="languages-bar">
-		<div id="languages-bar-inner"><?php
-			foreach ($layout['languages'] as $key => $value) { 
-				?><div class="language-icon-holder" <?=$key == $layout['lang'] ? 'style=" float: right; margin-right: 10px; "' : 'hidden' ?>>
-					<a class="<?=$value['html_classes']?>" href="<?=$layout['page']?><?=$value['href']?>"></a>
-				</div><?php 
-			}
-		?></div>
-	</div>
+	<a id="header-logo" href="/">
+		<img src="/view/img/header_logo.png">
+	</a>
+	<div id="languages-bar"><?php
+		foreach ($layout['languages'] as $key => $value) {
+			if($key == $layout['lang']) { 
+				?><span class="chosen-language-literal"><?=strtoupper($key)?></span><?php 
+			} 
+			?><div class="language-icon-holder <?=$key == $layout['lang'] ? 'chosen-language' : 'possible-language'?>">
+				<a class="<?=$value['html_classes']?> img-circle" href="<?=$layout['nav-page']?><?=$value['href']?>"></a>
+			</div><?php  
+		}
+	?></div>
 	<div id="search-bar">
 		<i class="fa fa-search" aria-hidden="true"></i>
-		<input id="search-user-input" hidden>
+		<input id="search-user-input">
 	</div>
 </header>
 <nav class="grid">
