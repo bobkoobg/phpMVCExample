@@ -32,4 +32,16 @@
             require_once("view/page/bodyheader.php");
             require_once("view/page/specificProduct.php");
         }
+
+        public function search() {
+            if(isset($_POST['search'])) {
+                print_r("KAJI WE BRAT");
+            }else {
+                print_r("NOPE");
+            }
+            echo json_encode([
+                'status' => '200',
+                'message' => 'HelloWorld!'
+            ]);
+        }
     }

@@ -3,4 +3,8 @@
 	//require_once('connection.php');
 
 	### Load layout 
-	require_once('view/layout.php');
+	if( $_GET['url'] == 'products/search/') {
+		require_once('routes.php');
+	} else {
+		require_once('view/layout.php');
+	}

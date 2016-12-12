@@ -59,8 +59,10 @@
 	$config = new Config();
 
 	### Load headers first
-	$headersController = new HeadersController( $config, $isExisting );
-	$headersController->show();
+	if( $page != 'products/search/') {
+		$headersController = new HeadersController( $config, $isExisting );
+		$headersController->show();
+	}
 
 	if ( isset( $controllerComponent ) && isset( $modelComponent ) ) {
 	    $model = new $modelComponent();
